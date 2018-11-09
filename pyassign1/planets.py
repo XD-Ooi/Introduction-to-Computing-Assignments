@@ -28,13 +28,9 @@ def orbit(t,r,step,x,y,num):
         t.seth(0)
         t.right(45)
         t.pd()
-    elif z > 0 and z <= 90:
+    elif (0 < z <= 90) or (180 < z <= 270):
         t.circle(r,step)
-    elif z > 90 and z <= 180:
-        t.circle(r/3,step)
-    elif z > 180 and z <= 270:
-        t.circle(r,step)
-    elif z > 270 and z < 360:
+    elif (90 < z <= 180) or (270 < z < 360):
         t.circle(r/3,step)
             
 def main():
