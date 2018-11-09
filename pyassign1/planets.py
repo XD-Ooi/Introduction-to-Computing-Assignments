@@ -20,10 +20,8 @@ def orbit(t,r,step,x,y,num):
     """Let the planet orbit around the sun with:
         t: name of planet, r: radius from the center, 
         step: rank of relative speed among other planets,
-        (x,y): initial position, and 
-        num: input from global."""
-    z = (num * step) % 361
-    
+        (x,y): initial position, and num: input from global."""
+    z = (num * step) % 361 
     if z == 0 or z == 360:
         t.setpos(x,y)
         t.seth(0)
