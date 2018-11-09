@@ -7,7 +7,7 @@ import turtle
 
 def planet(t, color, size):
     """Create a planet with:
-        t: name of planet, color, size."""
+        t: name of planet, custom color, and custom size."""
     t.speed(0)
     t.pu()
     t.shape("circle")
@@ -20,7 +20,8 @@ def orbit(t,r,step,x,y,num):
     """Let the planet orbit around the sun with:
         t: name of planet, r: radius from the center, 
         step: rank of relative speed among other planets,
-        initial position (x,y), and num as input from global."""
+        (x,y): initial position, and 
+        num: input from global."""
     z = (num * step) % 361
     
     if z == 0 or z == 360:
