@@ -1,6 +1,6 @@
 """
-Python作业 Assign2 (Nov/20/2018)
 Author: 黄新迪 1700094621 元培学院
+Python作业 Assign2 (Nov/20/2018)
 
 This module provides a function as a simple currency exchange calculator 
 using an online currency service. The module contains a main currency exchange 
@@ -13,9 +13,9 @@ def exchange(currency_from,currency_to,amount_from):
     """
     The function receives three input and returns a float output, 
     acting as a currency exchange calculator. 
-        currency_from: initial currency
+        currency_from: initial source currency
         currency_to: output currency
-        amount_from: initial amount in initial currency
+        amount_from: initial amount in initial source currency
         output: amount of exchanged output currency
     """
     
