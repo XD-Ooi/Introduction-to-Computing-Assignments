@@ -37,12 +37,8 @@ def exchange(currency_from,currency_to,amount_from):
     if output_dict["success"] == True:    
         output = output_dict["to"].split()
         return float(output[0])
-    elif output_dict["error"] == "Exchange currency code is invalid.":
-        return "Exchange currency code is invalid."
-    elif output_dict["error"] == "Source currency code is invalid.":
-        return "Source currency code is invalid."
-    elif output_dict["error"] == "Currency amount is invalid.":
-        return "Currency amount is invalid."  
+    elif output_dict["from"] == "":
+        return output_dict["error"]
 
 def test_run():
     """
