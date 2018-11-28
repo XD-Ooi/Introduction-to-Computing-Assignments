@@ -1,10 +1,13 @@
 """
-Author: 黄新迪 1700094621 元培学院
 Python作业 Assign2 (Nov/20/2018)
-
-This module provides a function as a simple currency exchange calculator 
+currency.py: This module provides a function as a simple currency exchange calculator 
 using an online currency service. The module contains a main currency exchange 
 function, and a few functions to check the exchange function.
+
+Author: 黄新迪 
+PKU ID: 1700094621 
+College: 元培学院
+Email: 1700094621@pku.edu.cn
 """
 
 from urllib.request import urlopen
