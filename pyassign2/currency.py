@@ -83,5 +83,7 @@ def main():
     
     print(exchange(currency_from,currency_to,amount_from))
     
+    testAll()
+    
 if __name__ == "__main__":
     main()
