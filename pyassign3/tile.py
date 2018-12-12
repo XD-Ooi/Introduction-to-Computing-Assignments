@@ -151,7 +151,7 @@ def wall_draw(m,n,combi,wall_identity):
     turtle.screensize(1000,1000)
     if m <= 5 or n <= 5:
         turtle.setworldcoordinates(-x,-y,x,y)
-    elif m <= 10 or m <= 10:
+    elif m <= 10 or n <= 10:
         turtle.setworldcoordinates(-x+100,-y+100,x-100,y-100)
     else:
         turtle.setworldcoordinates(-x+400,-y+400,x-400,y-400)
