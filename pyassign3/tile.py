@@ -139,7 +139,8 @@ def wall_draw(m,n,combi,wall_identity):
     combi: selected list of tiles combination that covers the wall completely.
     
     The function outputs a graphic of the selected method of tiling that covers
-    the wall completely.
+    the wall completely. The recommended values of m & n are less than 25 for 
+    optimum visualization.
     """
     x = m*100
     y = n*100
