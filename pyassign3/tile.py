@@ -140,7 +140,7 @@ def wall_draw(m,n,combi,wall_identity):
     
     The function outputs a graphic of the selected method of tiling that covers
     the wall completely. The recommended values of m & n are less than 25 for 
-    optimum visualization.
+    optimum visualization, the recommended maximum value is 30.
     """
     x = m*100
     y = n*100
@@ -154,8 +154,10 @@ def wall_draw(m,n,combi,wall_identity):
         turtle.setworldcoordinates(-x,-y,x,y)
     elif m <= 10 or n <= 10:
         turtle.setworldcoordinates(-x+100,-y+100,x-100,y-100)
-    else:
+    elif m <= 20 or n <= 20:
         turtle.setworldcoordinates(-x+400,-y+400,x-400,y-400)
+    else:
+        turtle.setworldcoordinates(-x+1000,-y+1000,x-1000,y-1000)
     
     #outline of the wall
     t.pu()
