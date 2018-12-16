@@ -17,6 +17,7 @@ def wall(m,n):
     
     The function outputs a dictionary of wall identity(k) for each 1 unit sq 
     of the wall with its respective i and j values."""
+    
     wall = {}
     for i in range(n):
         for j in range(m):
@@ -36,6 +37,7 @@ def tiling(m,a,b,x,y,matrix,combi):
     
     The function outputs the combination of tiles that covers the wall 
     completely in terms of wall identity(k)"""
+    
     tile = [i*m + j for i in range(x,x+b) for j in range(y,y+a)]
     for k in tile:
         matrix[k] = 1
@@ -52,6 +54,7 @@ def tile_check(m,n,a,b,x,y,matrix):
     
     The function checks in the matrix if the wall have space to place
     a tile and returns false if there is no space, true is there is."""
+    
     if x + b > n or y + a > m:
         return False
     else:
@@ -74,6 +77,7 @@ def tile_combi(m,n,a,b,wall_identity,matrix,all_ans,combi,x=0,y=0):
     combi: list of combination of tiles that covers the wall completely.
     
     The function outputs all the possible combition of tiling the wall."""
+    
     #for the case where the tile is square
     if a == b:
         if tile_check(m,n,a,b,x,y,matrix):
@@ -142,6 +146,7 @@ def wall_draw(m,n,combi,wall_identity):
     the wall completely. The recommended values of m & n are less than 25 for 
     optimum visualization, the recommended maximum value is 30.
     """
+    
     x = m*100
     y = n*100
     
@@ -233,6 +238,7 @@ def main():
     combination of complete tiling patterns from user's dimension inputs, then 
     prompt the user to select a method of tiling and display it graphically.
     """
+    
     m = int(input("length of wall:"))
     n = int(input("width of wall:"))
     a = int(input("length of tile:"))
