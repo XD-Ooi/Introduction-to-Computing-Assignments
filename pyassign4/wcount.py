@@ -70,7 +70,7 @@ if __name__ == "__main__":
         if len(paras) > 2:
             try:
                 topn = int(paras[2])
-            except ValueError as err1:
+            except Exception as err1:
                 print("Input Error for topn:{}".format(err1),\
                       "\n","Will run the function with default topn = 10")
         
