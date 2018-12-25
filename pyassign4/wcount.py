@@ -8,6 +8,7 @@ the number of most frequent words (default = 10) to be displayed from the comman
 """
 import sys
 from urllib.request import urlopen
+import urllib.error
 import string
 
 def retrieve_file(url):
@@ -69,15 +70,18 @@ if __name__ == "__main__":
         if len(paras) > 2:
             try:
                 topn = int(paras[2])
-            except Exception as err1:
-                print(err1, "\n","Will run the function with default topn = 10")
+            except ValueError as err1:
+                print("Input Error for topn:{}".format(err1),\
+                      "\n","Will run the function with default topn = 10")
         
         try:
             lines = retrieve_file(url)
-        except Exception as err2:
-            print(err2)
+        except urllib.error.URLError as err2:
+            print("URL Error:{}".format(err2))
+        except Exception as err3:
+            print("Unexpected Error:{}".format(err3))
         else:
             try:
                 wcount(lines,topn)
             except:
-                wcount(lines)           
+                wcount(lines)
