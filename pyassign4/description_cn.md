@@ -1,6 +1,6 @@
 统计一个文本文件中单词的出现次数。
 
-网站http://www.gutenberg.org提供了很多名著的TXT版本供下载。例如，小说ALICE'S ADVENTURES IN WONDERLAND的一个TXT版本在http://www.gutenberg.org/cache/epub/19033/pg19033.txt。
+网站http://www.gutenberg.org 提供了很多名著的TXT版本供下载。例如，小说ALICE'S ADVENTURES IN WONDERLAND的一个TXT版本在http://www.gutenberg.org/cache/epub/19033/pg19033.txt 。
 
 请写一个单词统计的程序，对于给定URL的文件，输出单词的出现频率, 按频率大小倒序 输出, 如下所示.
 ```
