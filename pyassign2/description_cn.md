@@ -62,4 +62,4 @@ def testAll()
     test_C()
     print("All tests passed")
 ```
-注意: 所有的测试函数和被测函数都在同一个文件 currency.py 中，不需要单独建立测试文件，这和http://www.cs.cornell.edu/courses/cs1110/2016fa/assignments/assignment1/index.php要求不同。
+注意: 所有的测试函数和被测函数都在同一个文件 currency.py 中，不需要单独建立测试文件，这和http://www.cs.cornell.edu/courses/cs1110/2016fa/assignments/assignment1/index.php 要求不同。
