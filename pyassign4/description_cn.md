@@ -72,7 +72,7 @@ if __name__ == '__main__':
 你的任务是使上述框架功能完整正确。
 
 
-**运行**
+运行
 ```
 $ python wcount.py http://www.gutenberg.org/cache/epub/19033/pg19033.txt 20
 ```
