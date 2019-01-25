@@ -41,8 +41,8 @@ doc = urlopen('http://cs1110.cs.cornell.edu/2016fa/a1server.php?from=USD&to=EUR&
 docstr = doc.read()
 doc.close()
 jstr = docstr.decode('ascii')
-doc.read() 返回的是字节流, 如: b'{ "from" : "2.5 United States Dollars", "to" : "2.24075 Euros", "success" : true, "error" : "" }' 可以调用 decode方法得到正常的字符串.
 ```
+doc.read() 返回的是字节流, 如: b'{ "from" : "2.5 United States Dollars", "to" : "2.24075 Euros", "success" : true, "error" : "" }' 可以调用 decode方法得到正常的字符串.
 
 迭代开发过程
 
