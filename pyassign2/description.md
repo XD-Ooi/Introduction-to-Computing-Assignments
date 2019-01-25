@@ -8,11 +8,11 @@ for example, *from=USD&to=EUR&amt=2.5* means exchanging 2.5 USD to EUR.
 
 The complet URL request is: http://cs1110.cs.cornell.edu/2016fa/a1server.php?from=USD&to=EUR&amt=2.5
 
-在浏览器中输入该地址，得到的结果类似为：{ "from" : "2.5 United States Dollars", "to" : "2.24075 Euros", "success" : true, "error" : "" }
+The result of the URL will be something like: { "from" : "2.5 United States Dollars", "to" : "2.24075 Euros", "success" : true, "error" : "" }
 
-本次作业的主要目标，就是分析得到的字符串，从里面获取需要的结果。
+The main purpose of this assignment is to analyze the result of the URL, and retrive the necessary information from it.
 
-你需要实现的函数:
+The function you need to realize looks something like this:
 ```
 def exchange(currency_from, currency_to, amount_from):
     """Returns: amount of currency received in the given exchange.
@@ -33,7 +33,7 @@ def exchange(currency_from, currency_to, amount_from):
     Precondition: amount_from is a float"""
 ```
 
-如何在Python3中访问URL
+**How to visit a URL in Python3**
 ```
 from urllib.request import urlopen
 
@@ -41,19 +41,20 @@ doc = urlopen('http://cs1110.cs.cornell.edu/2016fa/a1server.php?from=USD&to=EUR&
 docstr = doc.read()
 doc.close()
 jstr = docstr.decode('ascii')
-doc.read() 返回的是字节流, 如: b'{ "from" : "2.5 United States Dollars", "to" : "2.24075 Euros", "success" : true, "error" : "" }' 可以调用 decode方法得到正常的字符串.
 ```
+doc.read() returns a string, b'{ "from" : "2.5 United States Dollars", "to" : "2.24075 Euros", "success" : true, "error" : "" }' can be retrive as string with the decode function.
 
-迭代开发过程
 
-本次作业建议采取迭代开发方法，从基本功能开始，逐渐完成最终功能，具体可参考：http://www.cs.cornell.edu/courses/cs1110/2016fa/assignments/assignment1/index.php#iterative
+**Iterative Development Process**
 
-对于迭代开发中实现的每一个函数，需要提供一个测试函数，测试其是否正确，可以用Python语言的assert函数编写测试代码.
+We recommend using an iterative approach to complete the assignment, the exact process could be referenced from http://www.cs.cornell.edu/courses/cs1110/2016fa/assignments/assignment1/index.php#iterative
+
+For each function developed, a test function should be provided, the assert function could be used for this.
 ```
 def test_get_from()
     assert('USD' == get_from(json))
 ```
-你需要写一个 testAll 函数, 里面测试所有你编写的测试函数
+You need to write a testAll function, and test all your functions.
 ```
 def testAll()
     """test all cases"""
@@ -62,4 +63,4 @@ def testAll()
     test_C()
     print("All tests passed")
 ```
-注意: 所有的测试函数和被测函数都在同一个文件 currency.py 中，不需要单独建立测试文件，这和http://www.cs.cornell.edu/courses/cs1110/2016fa/assignments/assignment1/index.php要求不同。
+Note: All the functions and test functions are in the same currency.py documents, unlike the request in http://www.cs.cornell.edu/courses/cs1110/2016fa/assignments/assignment1/index.php, there is no need to develop another documents for the test functions.
